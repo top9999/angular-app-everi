@@ -1,0 +1,12 @@
+<div>
+    <h2>Shopping Cart</h2>
+    <p>Total Price: ${{ totalPrice }}</p>
+    <ul>
+        <li *ngFor="let item of cartItems; let i = index">
+            {{ item.title }} - ${{ item.price }} - {{ item.quantity }}
+            <button (click)="increaseQuantity(cartService.cartItems[i].id)">+</button>
+            <button (click)="decreaseQuantity(cartService.cartItems[i].id)">-</button>
+            <button (click)="removeItem(cartService.cartItems[i].id)">Remove</button>
+        </li>
+    </ul>
+</div>

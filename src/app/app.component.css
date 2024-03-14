@@ -1,0 +1,13 @@
+.header-container {
+    display: flex;
+    border: 1px black solid;
+}
+.nav-bar-container {
+    display: flex;
+}
+.nav-bar-container > a {
+    margin: 10px ;
+}
+.nav-bar-container > button {
+    border-radius: 1px;
+}

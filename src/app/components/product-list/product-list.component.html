@@ -1,0 +1,19 @@
+<h2>This is product lists</h2>
+
+<div *ngFor="let product of products">
+    <div style="display: flex; flex-direction: row;">
+        <div style="color: steelblue; font-size: 20px; padding-right: 1rem;">
+            {{product.showDescription ? '-' : '+'}}
+        </div>
+        <div 
+        (click)="product.showDescription = !product.showDescription"
+            style="color: steelblue; font-size: 20px;"
+        >{{ product.title }}</div>
+    </div>
+    <div *ngIf="product.showDescription" style="display: flex;">
+        <p>{{ product.description }}</p>
+        <a [routerLink]="'/product/' + product.id" 
+            style="display: flex; justify-content: center; align-items:center;padding-left: 20px;"
+        >View Details</a>
+    </div>
+</div>

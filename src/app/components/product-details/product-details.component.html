@@ -1,0 +1,9 @@
+<div>
+  <h1>{{ product?.title }}</h1>
+  <img [src]="product?.imageUrl" alt="Product Image">
+  <p>{{ product?.description }}</p>
+  <p>Price: ${{ product?.price }}</p>
+  <button (click)="addToCart()" >Add to Cart</button>
+  <button routerLink="/products" >Go back</button>
+  <div *ngIf="showConfirmation">Product added to cart!</div>
+</div>
